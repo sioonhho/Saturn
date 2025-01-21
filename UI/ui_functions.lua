@@ -181,7 +181,7 @@ function s_create_buttons(args)
           nodes = {
             {
               n = G.UIT.C,
-              config = { align = "cl", padding = 0.1, minw=3.6 },
+              config = { align = "cl", padding = 0.1, minw= v.minw or 3.6 },
               nodes = {
                 {
                   n = G.UIT.O,
@@ -201,7 +201,7 @@ function s_create_buttons(args)
                     align = "cm",
                     r = 0.1,
                     padding = 0,
-                    minw = 1.8,
+                    minw = .6,
                     colour = G.C.CLEAR,
                   },
                 })

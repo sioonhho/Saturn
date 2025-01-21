@@ -94,10 +94,10 @@ end
 S.TAB_FUNCS.saturn_options = function(e)
   	local ref_table = S.TEMP_SETTINGS.modules.preferences
   	local _buttons = {
-    	{label = 'Animation Skip', toggle_ref = ref_table.remove_animations, ref_value = 'enabled',},
-    	{label = 'Compact View', toggle_ref = ref_table.compact_view, ref_value = 'enabled'},
-    	{label = 'Consumable Stacking', toggle_ref = ref_table.stack_consumables, ref_value = 'enabled'},
-    	{label = 'Show Stickers', toggle_ref = ref_table.show_stickers, ref_value = 'enabled',},
+    	{label = 'Animation Skip', toggle_ref = ref_table.remove_animations, ref_value = 'enabled', minw = 4.5},
+    	{label = 'Compact View', toggle_ref = ref_table.compact_view, ref_value = 'enabled', minw = 4.5},
+    	{label = 'Consumable Stacking', toggle_ref = ref_table.stack_consumables, ref_value = 'enabled', minw = 4.5},
+    	{label = 'Show Stickers', toggle_ref = ref_table.show_stickers, ref_value = 'enabled', minw = 4.5},
   	}
   	local _tabs = {
 		{label = "Modules", button_ref = 's_change_tab', tab_func = 'saturn_features'},
