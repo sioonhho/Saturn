@@ -33,6 +33,9 @@ function Saturn:set_globals()
         compact_view = {
           enabled = false,
         },
+        stack_consumables = {
+          enabled = false,
+        },
         show_stickers = {
           enabled = false,
         },
