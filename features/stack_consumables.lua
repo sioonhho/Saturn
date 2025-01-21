@@ -775,7 +775,7 @@ function Card:add_to_deck(from_debuff)
     if self:canStack() then
       self.ability.amt = 1
       if not self.ignoreStack then
-        if self:canMerge() and Saturn.config.enable_stacking then
+        if self:canMerge() and S.SETTINGS.modules.preferences.stack_consumables.enabled then
           G.E_MANAGER:add_event(Event({
             trigger = "after",
             delay = 0.1,

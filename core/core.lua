@@ -9,6 +9,7 @@ assert(load(nativefs.read(lovely.mod_dir .. "/Saturn/features/" .. "stat_tracker
 assert(load(nativefs.read(lovely.mod_dir .. "/Saturn/features/" .. "remove_animations.lua")))()
 assert(load(nativefs.read(lovely.mod_dir .. "/Saturn/features/" .. "show_stickers.lua")))()
 assert(load(nativefs.read(lovely.mod_dir .. "/Saturn/features/" .. "run_timer.lua")))()
+assert(load(nativefs.read(lovely.mod_dir .. "/Saturn/features/" .. "stack_consumables.lua")))()
 
 assert(load(nativefs.read(lovely.mod_dir .. "/Saturn/tools/" .. "functions.lua")))()
 
