@@ -1227,6 +1227,37 @@ function G.UIDEF.button_split_one(card)
   return t
 end
 
+function G.UIDEF.button_split_half(card)
+  local t = {
+    n = G.UIT.C,
+    config = {
+      align = "cm",
+      ref_table = card,
+      minh = 0.3,
+      maxh = 0.6,
+      minw = 0.3,
+      maxw = 4,
+      r = 0.01,
+      padding = 0.1,
+      colour = G.C.DARK_EDITION,
+      shadow = true,
+      button = "split_half",
+      func = "can_split_half",
+    },
+    nodes = {
+      {
+        n = G.UIT.T,
+        config = {
+          text = "SPLIT HALF",
+          scale = 0.3,
+          colour = G.C.UI.TEXT_LIGHT,
+        },
+      },
+    },
+  }
+  return t
+end
+
 local highlight_ref = Card.highlight
 function Card:highlight(is_highlighted)
   if self:canStack() and self.added_to_deck then
@@ -1254,6 +1285,28 @@ function Card:highlight(is_highlighted)
             },
             nodes = {
               G.UIDEF.button_split_one(self),
+            },
+          },
+          config = {
+            align = "bmi",
+            offset = {
+              x = 0,
+              y = y,
+            },
+            bond = "Strong",
+            parent = self,
+          },
+        })
+        y = y + 0.5
+        self.children.split_half_button = UIBox({
+          definition = {
+            n = G.UIT.ROOT,
+            config = {
+              padding = 0,
+              colour = G.C.CLEAR,
+            },
+            nodes = {
+              G.UIDEF.button_split_half(self),
             },
           },
           config = {
